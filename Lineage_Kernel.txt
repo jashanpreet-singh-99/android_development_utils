@@ -1,0 +1,1 @@
+Wireguard.sh Error :-> Fetch latest script to Fetch wireguard from the latest repo.
