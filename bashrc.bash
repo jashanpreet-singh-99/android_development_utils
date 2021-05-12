@@ -39,7 +39,7 @@ sudo $(which fastboot) -i 0x2A96 reboot
 echo "-------------------------[ ALL DONE ]-------------------------------"
 }
 
-flash_twrp () {
+boot_twrp () {
 sudo $(which fastboot) -i 0x2A96 boot ~/android/stock/twrp.img
 }
 
