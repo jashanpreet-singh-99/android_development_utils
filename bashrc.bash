@@ -45,6 +45,8 @@ sudo $(which fastboot) -i 0x2A96 boot ~/android/stock/twrp.img
 
 make_kernel_zip() {
         cp -R $(pwd)/arch/arm64/boot/Image /home/jashan/android/Utils/kernel_zip/tools/
+        mv $(pwd)/arch/arm64/boot/dtb $(pwd)/arch/arm64/boot/dt.img
+        cp -R $(pwd)/arch/arm64/boot/dt.img /home/jashan/android/Utils/kernel_zip/tools/
         mkdir -p $(pwd)/out
         kernel_path=$(pwd)/out/kernel_out.zip
         cd /home/jashan/android/Utils/kernel_zip
