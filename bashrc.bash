@@ -71,3 +71,7 @@ enable_adb() {
         cd $path
 }
 
+# docker 
+alias run_ubuntu="sudo docker run -it --rm -v $ANDROID_BUILD_TOP:/src android-build-trusty"
+
+
