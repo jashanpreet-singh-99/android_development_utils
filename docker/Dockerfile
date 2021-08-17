@@ -11,7 +11,9 @@ RUN curl -o /usr/local/bin/repo https://storage.googleapis.com/git-repo-download
 RUN groupadd -g $groupid jashan \
  && useradd -m -u $userid -g $groupid jashan \
  && echo jashan >/root/username \
- && echo "export USER="jashan >>/home/jashan/.gitconfig
+ && echo "[user]" >>/home/jashan/.gitconfig
+ && echo "	name = Jashanpreet Singh" >>/home/jashan/.gitconfig
+ && echo "	email = jashan.singh.work@icloud.com" >>/home/jashan/.gitconfig
 ENV HOME=/home/jashan
 ENV USER=jashan
 ENTRYPOINT chroot --userspec=$(cat /root/username):$(cat /root/username) / /bin/bash -i
